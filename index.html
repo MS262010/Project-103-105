@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <title>Image Recognizer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,443&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div class="container">
+
+    <center>
+      <h1 style="text-decoration:underline;">My Family Recognizer</h1>
+      <br><br>
+
+      <p style="font-size: 22px;">Model is trained to identify the following objects: </p>
+      <hr>
+      <label id="name">Father</label>
+      <br><br>
+      <label id="name">Mother</label>
+      <br><br>
+      <label id="name">Sister</label>
+      <br><br>
+      <label id="name">Mandrita (Me)</label>
+      <hr>
+    </center>
+    <label style="font-size: 16px;">Webcam View - </label><br><br>
+    <center>
+      <div id="camera"></div><br>
+      <div id="result"></div><br>
+      <button class="btn btn-primary" onclick="take_snapshot()">Capture Image</button><br><br>
+      <button class="btn btn-success" onclick="check()">Identify Image</button><hr>
+      <p style="font-size: 22px;">Object : <span id="result_object_name"></span>  </p>
+      <p style="font-size: 22px;">Accuracy : <span id="result_object_accuracy"></span> </p>
+
+    </center>
+
+  </div>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
